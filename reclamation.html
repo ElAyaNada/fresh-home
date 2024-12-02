@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaires de Réclamation, Avis et Réservations</title>
+  <style>
+   
+    :root {
+      --primary-color: #4CAF50; 
+      --secondary-color: #2C3E50; 
+      --background-color: #f4f7f6; 
+      --border-color: #ddd; 
+      --button-hover-color: #45a049;
+      --text-color: #333; 
+      --button-color: #4CAF50; 
+      --error-color: #E74C3C; 
+      --success-color: #2ecc71; 
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      color: var(--secondary-color);
+    }
+
+    .container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: white;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .container input,
+    .container textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .container button {
+      padding: 10px 20px;
+      background-color: var(--button-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: var(--button-hover-color);
+    }
+
+    .container p {
+      font-size: 14px;
+      color: var(--text-color);
+    }
+
+    #confirmation-reclamation,
+    #confirmation-avis {
+      color: var(--success-color);
+    }
+
+    #error-message {
+      color: var(--error-color);
+    }
+
+    /* Conteneur pour les réservations */
+    .reservations {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .reservations ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .reservations li {
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container pour les réclamations -->
+  <div class="container" id="reclamation-container">
+    <h3>Faire une Réclamation</h3>
+    <input type="text" id="obj-reclamation" placeholder="objet" />
+    <input type="text" id="emp-reclamation" placeholder="nom d'employé" />
+    <textarea id="reclamation" rows="4" placeholder="Votre réclamation"></textarea>
+    <button onclick="envoyerReclamation()">Envoyer la réclamation</button>
+    <p id="confirmation-reclamation"></p>
+  </div>
+
+  <!-- Container pour les avis -->
+  <div class="container" id="avis-container">
+    <h3>Donner un Avis</h3>
+    <textarea id="avis" rows="4" placeholder="Votre avis"></textarea>
+    <button onclick="envoyerAvis()">Envoyer l'avis</button>
+    <p id="confirmation-avis"></p>
+  </div>
+
+  
+  <div class="container" id="reservations-container">
+    <h3>Vos Réservations Précédentes</h3>
+    <button onclick="afficherReservations()">Vérifier les réservations</button>
+    <div id="reservations-list" class="reservations"></div>
+  </div>
+
+  <script>
+    let reclamations = [];
+    let avis = [];
+    let reservations = [];
+
+    function envoyerReclamation() {
+      let reclamation = document.getElementById('reclamation').value;
+      
+      if (reclamation) {
+        reclamations.push({ reclamation });
+        document.getElementById('confirmation-reclamation').innerText = `Réclamation envoyée par ${nom}.`;
+      } else {
+        document.getElementById('confirmation-reclamation').innerText = "Veuillez remplir tous les champs.";
+      }
+    }
+
+    function envoyerAvis() {
+      let avisText = document.getElementById('avis').value;
+      
+      if ( avisText) {
+        avis.push({  avisText });
+        document.getElementById('confirmation-avis').innerText = `Avis envoyé par ${nom}.`;
+      } else {
+        document.getElementById('confirmation-avis').innerText = "Veuillez remplir tous les champs.";
+      }
+    }
+
+    function afficherReservations() {
+      let reservationsDiv = document.getElementById('reservations-list');
+      reservationsDiv.innerHTML = ""; 
+
+      
+        if (reservations[nom]) {
+          let ul = document.createElement("ul");
+          reservations[nom].forEach(reservation => {
+            let li = document.createElement("li");
+            li.textContent = reservation;
+            ul.appendChild(li);
+          });
+          reservationsDiv.appendChild(ul);
+        } else {
+          reservationsDiv.innerHTML = "Aucune réservation trouvée pour ce nom.";
+        }
+      } 
+  </script>
+
+</body>
+</html>

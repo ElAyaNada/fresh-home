@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            background-color: #FFFFF0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            width: 600px; 
+            padding: 20px;
+            background-color: #eed8b0;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+        
+        input[type=submit] {
+            background-color: #FFFFF0;
+            color: #644407;
+            padding: 10px 20px; 
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        label {
+            width: 120px; 
+            text-align: right; 
+            margin-right: 10px; 
+            font-size: 20px; 
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+    
+        form div {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        
+        input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+            width: 100%; 
+            padding: 8px; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px; 
+        }
+    
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 50px; 
+        }
+
+        #successMessage {
+            display: none;
+            color: #644407;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="#" method="post" >
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="emaill" name="email" required>
+            </div>
+            <div>
+                <label for="pswd">Password</label>
+                <input type="password" id="pswdd" name="pswd" required>
+            </div>
+            <input type="submit" value="Sign Up">
+        </form>
+    <script>
+        document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("pswd").value;
+            console.log(list);
+            
+        });
+    </script>
+</body>
+</html>

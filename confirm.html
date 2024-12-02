@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation de Réservation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #eed8b0;
+    }
+
+    .container {
+      background-color: #ffdfa4;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 400px;
+    }
+
+    h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container input,
+    .container select {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #785c2f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: #45a049;
+    }
+
+    #confirmation-container {
+      display: none;
+      text-align: center;
+    }
+
+    #thank-you-message {
+      font-size: 18px;
+      color: #4CAF50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #return-button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #return-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container pour la confirmation de la réservation -->
+  <div class="container" id="reservation-container">
+    <h3>Confirmation de votre réservation</h3>
+    <input type="text" id="nom" placeholder="Votre nom" required>
+    <select id="mode-paiement" required>
+      <option value="" disabled selected>Sélectionnez le mode de paiement</option>
+      <option value="cash">Espèces</option>
+      <option value="carte">Carte bancaire</option>
+    </select>
+    <button onclick="confirmerReservation()">Confirmer la réservation</button>
+  </div>
+
+  <!-- Container pour afficher le message de confirmation et le retour à la page d'accueil -->
+  <div class="container" id="confirmation-container">
+    <div id="thank-you-message"></div>
+    <button id="return-button" onclick="retourPageAccueil()">Retour à la page d'accueil</button>
+  </div>
+
+  <script>
+    function confirmerReservation() {
+      let nom = document.getElementById('nom').value;
+      let modePaiement = document.getElementById('mode-paiement').value;
+
+      if (nom && modePaiement) {
+        document.getElementById('reservation-container').style.display = 'none';
+        document.getElementById('confirmation-container').style.display = 'block';
+
+        let message = `Merci ${nom} pour votre réservation! Vous avez choisi de payer par ${modePaiement}.`;
+        document.getElementById('thank-you-message').innerText = message;
+      } else {
+        alert("Veuillez remplir tous les champs.");
+      }
+    }
+
+    function retourPageAccueil() {
+      window.location.href = "home.html"; 
+    }
+  </script>
+
+</body>
+</html>

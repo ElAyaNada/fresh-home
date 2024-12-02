@@ -1,0 +1,143 @@
+body{
+    background-color: #eed8b0;
+}
+#switchMode{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: #eed8b0;
+    background-color: var(--base-varuant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 90%;
+    margin-top: -65px;
+}
+h1{
+    margin-left: 40%;
+    color: white;
+}
+.navbar{
+display: flex;
+gap: 350px; 
+align-items: center; 
+list-style-type: none;
+margin-top: 30px;
+font-size: 30px;
+
+}
+.checkbox{
+    cursor: pointer;
+    width: 20px;
+    border: #eed8b0;
+    border-radius: 25px;
+}
+.ligne{
+    width: 800px;
+    
+    color: gray;
+}
+.menage{
+    border: solid gray 1px;
+    border-radius: 5px;
+}
+#type1{
+    margin-left: 35%;
+    color: white;
+}
+.type_menage{
+    display: flex;
+    gap: 300px; 
+    align-items: center; 
+    list-style-type: none;
+    margin-top: 30px;
+    font-size: 30px; 
+}
+label{
+    display: flex;
+}
+#confirmer{
+    display: flex;
+    flex-direction: column; /* Aligne les groupes d'input et label verticalement */
+    gap: 20px;
+
+}
+.group {
+    display: flex;
+    flex-direction: column; /* Aligne le label et l'input dans un groupe verticalement */
+    gap: 5px; /* Espace entre le label et l'input */
+    margin-left: 30px;
+  }
+
+  label {
+    font-weight: bold; /* Vous pouvez styliser le label comme bon vous semble */
+
+  }
+
+  .input {
+    padding: 8px;
+    width:50%; /* Vous pouvez ajuster la largeur des champs */
+    border-radius: 10px;
+  }
+  .adresse{
+    display: flex;
+    margin-left: 60%;
+    flex-direction: column; 
+    gap: 5px; 
+    
+  }
+  .inputN{
+    padding: 8px;
+    width:50%; /* Vous pouvez ajuster la largeur des champs */
+    border-radius: 10px;
+  }
+  .inputA{
+    cursor: pointer;
+    
+  }
+  #btn{
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px #eed8b0 ;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-left: 69%;
+    margin-bottom: 10px;
+  }
+  #btn:hover{
+    background-color: aquamarine;
+    color: black;
+  }
+  .cuisine{
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.titre{
+
+    margin-left: -1400px;
+    color: white;
+}
+.baby{
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+#type3{
+    margin-left: 30%;
+    color: white;
+}
+.urgent{
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+#type4{
+    margin-left: 40%;
+    color: red;
+}

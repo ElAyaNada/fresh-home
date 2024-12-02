@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="reserv.css">
+    <title>reservation</title>
+</head>
+<body>
+    <h1 id="bienvenue">hello</h1>
+    <button id="switchMode">
+        <img src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png" height="24" width="24" onclick="darkMode()" alt="" id="img">
+    </button>
+    <ul class="navbar" >
+      <li><label for="" class="darkmode"><input type="checkbox"  class="checkbox" id="input_menage">menage</label></li>  
+      <li><label for="" class="darkmode"><input type="checkbox" class="checkbox"  id="input_cuisine">cuisine</label></li>
+      <li><label for="" class="darkmode"><input type="checkbox" class="checkbox"  id="input_baby">baby siting</label></li>
+    </ul>
+    <hr class="ligne">
+    <div class="menage" id="menage">
+        <h1 id="type1">Bienvenue a service de Menage</h1>
+        <ul class="type_menage" >
+          <li><label for=""><input type="checkbox" class="checkbox">deep clean</label></li>
+          <li><label for=""><input type="checkbox" class="checkbox">Demenagement</label></li>
+          <li><label for=""><input type="checkbox" class="checkbox">clean </label></li>
+    </ul>
+    <div id="confirmer">
+        <div class="group">
+        <label for="" >Duree :</label>
+        <input class="input" type="number" >
+    </div>
+    <div class="group">
+        <label for="" >Date :</label>
+        <input class="input" type="date">
+    </div>
+        <div class="group">
+        <label for="" >nombre de  :</label>
+        <input class="input" type="number" >
+    </div>
+        </div>
+     
+    
+        <div class="adresse">
+            <label class="titre"><h1>Adresse</h1></label>
+             <label>
+                <input class="inputA" type="radio" name="new_adresse" value="" >
+                Home
+              </label><br>
+            
+              <label class="new_adresse">
+                <input class="inputA" type="radio" name="new_adresse" value="">
+                <input class="inputN" type="text" placeholder="donner votre nouveau adresse">
+              </label><br>
+            
+            
+        </div>
+        <button type="submit" id="btn">confirmer</button>
+    </div>
+    <div class="cuisine" id="cuisine">
+        <h1 id="type1">Bienvenue a service de cuisine</h1>
+      
+    <div id="confirmer">
+        <div class="group">
+        <label for="" >Duree :</label>
+        <input class="input" type="number" >
+    </div>
+    <div class="group">
+        <label for="" >Date :</label>
+        <input class="input" type="date">
+    </div>
+        <div class="group">
+        <label for="" >nombre de serveur :</label>
+        <input class="input" type="number" >
+    </div>
+    <div class="group">
+        <label for="" >Type d'evenement:</label>
+        <input class="input" type="text" >
+    </div>
+    <div class="adresse">
+        <label class="titre"><h1>Menu</h1></label>
+        <label>
+            <input class="inputA" type="radio" name="menu" value="" >
+            Chef
+          </label><br>
+        
+          <label >
+            <input class="inputA" type="radio" name="menu" value="">
+            <input class="inputN" type="text" placeholder="si vous voulez">
+          </label><br>
+        
+        
+    </div>
+        </div>
+     
+    
+        <div class="adresse">
+            <label class="titre"><h1>Adresse</h1></label>
+            <label>
+                <input class="inputA" type="radio" name="new_adresse" value="" >
+                Home
+              </label><br>
+            
+              <label class="new_adresse">
+                <input class="inputA" type="radio" name="new_adresse" value="">
+                <input class="inputN" type="text" placeholder="donner votre nouveau adresse">
+              </label><br>
+            
+            
+        </div>
+        <button type="submit" id="btn">confirmer</button>
+    </div>
+    <div class="baby" id="baby">
+        <h1 id="type3">Bienvenue a service de baby sitting</h1>
+      
+    <div id="confirmer">
+        <div class="group">
+        <label for="" >Duree :</label>
+        <input class="input" type="number" >
+    </div>
+    <div class="group">
+        <label for="" >Date :</label>
+        <input class="input" type="date">
+    </div>
+        <div class="group">
+        <label for="" >nombre de baby :</label>
+        <input class="input" type="number" >
+    </div>
+    <div class="group">
+        <label for="" >age de baby :</label>
+        <input class="input" type="number" >
+    </div>
+   
+        </div>
+     
+    
+        <div class="adresse">
+            <label class="titre"><h1>Adresse</h1></label>
+            <label>
+                <input class="inputA" type="radio" name="new_adresse" value="" >
+                Home
+              </label><br>
+            
+              <label class="new_adresse">
+                <input class="inputA" type="radio" name="new_adresse" value="">
+                <input class="inputN" type="text" placeholder="donner votre nouveau adresse">
+              </label><br>
+            
+            
+        </div>
+        <button type="submit" id="btn">confirmer</button>
+        </div>
+    
+        <div class="urgent" id="urgent" >
+            <h1 id="type4">service pour urgent !</h1>
+          
+        <div id="confirmer">
+            
+            <div class="group">
+            <label for="" >nombre de baby :</label>
+            <input class="input" type="number" >
+        </div>
+        <div class="group">
+            <label for="" >age de baby :</label>
+            <input class="input" type="number" >
+        </div>
+       
+            </div>
+         
+        
+            <div class="adresse">
+                <label class="titre"><h1>Adresse</h1></label>
+                <label>
+                    <input class="inputA" type="radio" name="new_adresse" value="" >
+                    Home
+                  </label><br>
+                
+                  <label class="new_adresse">
+                    <input class="inputA" type="radio" name="new_adresse" value="">
+                    <input class="inputN" type="text" placeholder="donner votre nouveau adresse">
+                  </label><br>
+                
+                
+            </div>
+            <button type="submit" id="btn">confirmer</button>
+        </div>
+        <script src="reserv.js"></script>
+
+    </body>
+</html>

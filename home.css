@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1a1a1a;
+  }
+  
+  
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    padding: 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.6); /* Assombrit le fond pour rendre le texte lisible */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #bd8d4e;
+  }
+  
+  .navbar .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f39c12;
+  }
+  .services-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .services-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    background-color: #E3F2FD;
+    color: #1E88E5;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .service-button {
+    background-color: #1E88E5;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .service-button:hover {
+    background-color: #1565C0;
+  }
+  
+  
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background: url('Download premium image of Clean natural brown towels bathroom design by Karolina _ Kaboompics about spa, bathroom, towel, bath, and laundry 2255781.jpeg') no-repeat center center/cover;
+    padding: 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .footer {
+    background-color: #102027;
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column p,
+  .footer-column a,
+  .footer-column li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    color: #f39c12;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .logo-blue {
+    color: #3498db;
+  }
+  
